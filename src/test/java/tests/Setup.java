@@ -2,8 +2,6 @@ package tests;
 
 
 import java.net.URL;
-import java.util.Iterator;
-import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -61,7 +59,7 @@ public class Setup {
 			alarmTime = alarmDescription.getText();
 		}
 		
-		Reporter.log("Alarm Time: "+ alarmTime,true);
+//		Reporter.log("Alarm Time: "+ alarmTime,true);
 		Assert.assertEquals( alarmTime,expectedString);
 		
 		alarmDescription.click();
@@ -70,18 +68,23 @@ public class Setup {
 	
 	@Test
 	public void changeAlarmTime() {
+		WebDriverWait wait = new WebDriverWait(driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.TimePicker/android.widget.LinearLayout")));
+		
 		MobileElement hour9 = driver.findElement(By.xpath("//android.widget.RadialTimePickerView.RadialPickerTouchHelper[@content-desc=\"9\"]"));
 		hour9.click();
+		
 		MobileElement minute25 = driver.findElement(By.xpath("//android.widget.RadialTimePickerView.RadialPickerTouchHelper[@content-desc=\"25\"]"));
 		minute25.click();
+		
 		MobileElement btnOK = driver.findElement(By.id("android:id/button1"));
 		btnOK.click();
 		
 		MobileElement alarmDescription=null;
-		alarmDescription  = driver.findElementByXPath("//android.widget.TextView[@content-desc=\"9:25 AM\"]");
-//		Assert.assertNotNull(alarmDescription.getText(),"9:25 AM");
-		WebDriverWait wait = new WebDriverWait(driver,20);
+//		
+		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.TextView[@content-desc=\"9:25 AM\"]")));
+		
 		alarmDescription  = driver.findElementByXPath("//android.widget.TextView[@content-desc=\"9:25 AM\"]");
 		
 		MobileElement alarmSwitch = driver.findElementByXPath("//android.view.ViewGroup[@content-desc=\"9:25 AM Alarm\"]/android.widget.Switch");
