@@ -18,7 +18,7 @@ import io.appium.java_client.MobileElement;
 
 
 
-public class Setup {
+public class AlarmTests {
 	static AppiumDriver<MobileElement> driver;
 	 
 	
@@ -42,7 +42,7 @@ public class Setup {
 	}
 	
 	@Test
-	public void alarmClick() {
+	public void alarmTimeValidFormat() {
 		MobileElement alarmElement = driver.findElementByXPath("//rk[@content-desc=\"Alarm\"]/android.widget.TextView");
 		String expectedString = "8:30 AM";
 		alarmElement.click();
@@ -81,8 +81,7 @@ public class Setup {
 		btnOK.click();
 		
 		MobileElement alarmDescription=null;
-//		
-		
+
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.TextView[@content-desc=\"9:25 AM\"]")));
 		
 		alarmDescription  = driver.findElementByXPath("//android.widget.TextView[@content-desc=\"9:25 AM\"]");
@@ -91,6 +90,30 @@ public class Setup {
 		Assert.assertNotNull(alarmDescription.getText(),"9:25 AM");
 		Assert.assertEquals(alarmSwitch.getAttribute("checked"),"true");
 	}
+	
+	@Test
+	public void createNewAlarmCancel() {
+		WebDriverWait wait = new WebDriverWait(driver,20);
+		MobileElement btnAddAlarm = driver.findElementById("com.google.android.deskclock:id/fab");
+		btnAddAlarm.click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("android:id/radial_picker")));
+		MobileElement btnCancel = driver.findElementById("android:id/button2");
+		btnCancel.click();
+		boolean invalidAlarmCreated = true;
+		try {
+			MobileElement invalidAlarm = driver.findElementByXPath("(//android.view.ViewGroup[@content-desc=\" Alarm\"])[3]");	
+		} catch (Exception e) {
+			// TODO: handle exception
+			invalidAlarmCreated = false;
+		}
+		
+		Assert.assertEquals(invalidAlarmCreated, false);
+		
+		
+		
+		
+	}
+
 	
 	@AfterTest
 	public  void terminate () {

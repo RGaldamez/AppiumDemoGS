@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.Setup">
+      <class name="tests.AlarmTests">
         <methods>
           <include name="setup"/>
+          <include name="createNewAlarmCancel"/>
           <include name="terminate"/>
+          <include name="validAlarmFormat"/>
           <include name="changeAlarmTime"/>
         </methods>
-      </class> <!-- tests.Setup -->
+      </class> <!-- tests.AlarmTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
