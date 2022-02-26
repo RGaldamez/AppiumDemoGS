@@ -81,11 +81,11 @@ public class Setup {
 		alarmDescription  = driver.findElementByXPath("//android.widget.TextView[@content-desc=\"9:25 AM\"]");
 //		Assert.assertNotNull(alarmDescription.getText(),"9:25 AM");
 		WebDriverWait wait = new WebDriverWait(driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.view.ViewGroup[@content-desc=\"9:25 AM Alarm\"]/android.widget.Switch")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.TextView[@content-desc=\"9:25 AM\"]")));
 		alarmDescription  = driver.findElementByXPath("//android.widget.TextView[@content-desc=\"9:25 AM\"]");
 		
 		MobileElement alarmSwitch = driver.findElementByXPath("//android.view.ViewGroup[@content-desc=\"9:25 AM Alarm\"]/android.widget.Switch");
-		
+		Assert.assertNotNull(alarmDescription.getText(),"9:25 AM");
 		Assert.assertEquals(alarmSwitch.getAttribute("checked"),"true");
 	}
 	

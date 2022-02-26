@@ -14,12 +14,12 @@
       <![CDATA[Cleaning up]]>
     </line>
   </reporter-output>
-  <suite started-at="2022-02-25T20:25:16 GMT-06:00" name="Default suite" finished-at="2022-02-25T20:25:28 GMT-06:00" duration-ms="11918">
+  <suite started-at="2022-02-25T20:33:13 GMT-06:00" name="Default suite" finished-at="2022-02-25T20:33:25 GMT-06:00" duration-ms="12066">
     <groups>
     </groups>
-    <test started-at="2022-02-25T20:25:16 GMT-06:00" name="Default test" finished-at="2022-02-25T20:25:28 GMT-06:00" duration-ms="11918">
+    <test started-at="2022-02-25T20:33:13 GMT-06:00" name="Default test" finished-at="2022-02-25T20:33:25 GMT-06:00" duration-ms="12066">
       <class name="tests.Setup">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Setup@4d465b11]" started-at="2022-02-25T20:25:16 GMT-06:00" name="setup" finished-at="2022-02-25T20:25:22 GMT-06:00" duration-ms="6231" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Setup@4d465b11]" started-at="2022-02-25T20:33:13 GMT-06:00" name="setup" finished-at="2022-02-25T20:33:19 GMT-06:00" duration-ms="6395" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Setting up capabilities...]]>
@@ -29,18 +29,18 @@
             </line>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="alarmClick()[pri:0, instance:tests.Setup@4d465b11]" started-at="2022-02-25T20:25:22 GMT-06:00" name="alarmClick" finished-at="2022-02-25T20:25:24 GMT-06:00" duration-ms="2246" status="PASS">
+        <test-method signature="alarmClick()[pri:0, instance:tests.Setup@4d465b11]" started-at="2022-02-25T20:33:19 GMT-06:00" name="alarmClick" finished-at="2022-02-25T20:33:21 GMT-06:00" duration-ms="2241" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Alarm Time: 8:30 AM]]>
             </line>
           </reporter-output>
         </test-method> <!-- alarmClick -->
-        <test-method signature="changeAlarmTime()[pri:0, instance:tests.Setup@4d465b11]" started-at="2022-02-25T20:25:24 GMT-06:00" name="changeAlarmTime" finished-at="2022-02-25T20:25:27 GMT-06:00" duration-ms="2985" status="PASS">
+        <test-method signature="changeAlarmTime()[pri:0, instance:tests.Setup@4d465b11]" started-at="2022-02-25T20:33:21 GMT-06:00" name="changeAlarmTime" finished-at="2022-02-25T20:33:24 GMT-06:00" duration-ms="3020" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- changeAlarmTime -->
-        <test-method is-config="true" signature="terminate()[pri:0, instance:tests.Setup@4d465b11]" started-at="2022-02-25T20:25:27 GMT-06:00" name="terminate" finished-at="2022-02-25T20:25:28 GMT-06:00" duration-ms="430" status="PASS">
+        <test-method is-config="true" signature="terminate()[pri:0, instance:tests.Setup@4d465b11]" started-at="2022-02-25T20:33:24 GMT-06:00" name="terminate" finished-at="2022-02-25T20:33:25 GMT-06:00" duration-ms="383" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Cleaning up]]>
