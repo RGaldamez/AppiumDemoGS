@@ -6,10 +6,8 @@
       <class name="tests.AlarmTests">
         <methods>
           <include name="setup"/>
-          <include name="createNewAlarmCancel"/>
           <include name="terminate"/>
-          <include name="validAlarmFormat"/>
-          <include name="changeAlarmTime"/>
+          <include name="failingTestExample"/>
         </methods>
       </class> <!-- tests.AlarmTests -->
     </classes>

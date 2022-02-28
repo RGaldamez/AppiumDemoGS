@@ -91,6 +91,48 @@ public class AlarmTests {
 		Assert.assertEquals(alarmSwitch.getAttribute("checked"),"true");
 	}
 	
+	
+	
+
+	
+	@Test
+	public void createNewAlarm() {
+		WebDriverWait wait = new WebDriverWait(driver,20);
+		MobileElement btnAddAlarm = driver.findElementById("com.google.android.deskclock:id/fab");
+		btnAddAlarm.click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("android:id/radial_picker")));
+		MobileElement hourPicker = driver.findElementById("android:id/hours");
+		MobileElement minutePicker = driver.findElementById("android:id/minutes");
+		MobileElement AMpicker = driver.findElementById("android:id/am_label");
+		
+		String timeOfDayLabel = "";
+		
+		if(AMpicker.getAttribute("checked")=="true") {
+			timeOfDayLabel = "AM";
+ 		}else {
+ 			timeOfDayLabel = "PM";
+ 		}
+		
+		String currentTime = hourPicker.getText() +":" + minutePicker.getText()+" "+timeOfDayLabel+" Alarm";
+		MobileElement btnOK = driver.findElementById("android:id/button1");
+		btnOK.click();
+		
+		Reporter.log("currentTime: "+currentTime,true);
+		boolean validAlarmCreated = true;
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.google.android.deskclock:id/fab")));
+		driver.findElementsByAccessibilityId(currentTime);
+//		try {
+//			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.google.android.deskclock:id/fab")));
+//			MobileElement validAlarm = driver.findElementByXPath("//android.view.ViewGroup[@content-desc=\""+currentTime+"\"]");	
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//			validAlarmCreated = false;
+//			Reporter.log(e.getMessage(),true);
+//		}
+		
+		Assert.assertEquals(validAlarmCreated, true);	
+	}
+	
 	@Test
 	public void createNewAlarmCancel() {
 		WebDriverWait wait = new WebDriverWait(driver,20);
@@ -101,17 +143,32 @@ public class AlarmTests {
 		btnCancel.click();
 		boolean invalidAlarmCreated = true;
 		try {
-			MobileElement invalidAlarm = driver.findElementByXPath("(//android.view.ViewGroup[@content-desc=\" Alarm\"])[3]");	
+			MobileElement invalidAlarm = driver.findElementByXPath("(//android.view.ViewGroup[@content-desc=\" Alarm\"])[4]");	
 		} catch (Exception e) {
 			// TODO: handle exception
 			invalidAlarmCreated = false;
 		}
 		
-		Assert.assertEquals(invalidAlarmCreated, false);
+		Assert.assertEquals(invalidAlarmCreated, false);	
+	}
+	
+	@Test
+	public void failingTestExample() {
+		WebDriverWait wait = new WebDriverWait(driver,20);
+		MobileElement btnAddAlarm = driver.findElementById("com.google.android.deskclock:id/fab");
+		btnAddAlarm.click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("android:id/radial_picker")));
+		MobileElement btnCancel = driver.findElementById("android:id/button2");
+		btnCancel.click();
+		boolean invalidAlarmCreated = true;
+		try {
+			MobileElement invalidAlarm = driver.findElementByXPath("(//android.view.ViewGroup[@content-desc=\" Alarm\"])[1]");	
+		} catch (Exception e) {
+			// TODO: handle exception
+			invalidAlarmCreated = false;
+		}
 		
-		
-		
-		
+		Assert.assertEquals(invalidAlarmCreated, false);	
 	}
 
 	
