@@ -8,18 +8,18 @@
       <![CDATA[Starting tests]]>
     </line>
     <line>
-      <![CDATA[currentTime: 1:47 PM Alarm]]>
+      <![CDATA[currentTime: 1:56 PM Alarm]]>
     </line>
     <line>
       <![CDATA[Cleaning up]]>
     </line>
   </reporter-output>
-  <suite started-at="2022-02-28T13:47:39 GMT-06:00" name="Default suite" finished-at="2022-02-28T13:47:56 GMT-06:00" duration-ms="17109">
+  <suite started-at="2022-02-28T13:56:27 GMT-06:00" name="Default suite" finished-at="2022-02-28T13:56:43 GMT-06:00" duration-ms="16429">
     <groups>
     </groups>
-    <test started-at="2022-02-28T13:47:39 GMT-06:00" name="Default test" finished-at="2022-02-28T13:47:56 GMT-06:00" duration-ms="17109">
+    <test started-at="2022-02-28T13:56:27 GMT-06:00" name="Default test" finished-at="2022-02-28T13:56:43 GMT-06:00" duration-ms="16429">
       <class name="tests.AlarmTests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.AlarmTests@4fb3ee4e]" started-at="2022-02-28T13:47:39 GMT-06:00" name="setup" finished-at="2022-02-28T13:47:45 GMT-06:00" duration-ms="6388" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.AlarmTests@4fb3ee4e]" started-at="2022-02-28T13:56:27 GMT-06:00" name="setup" finished-at="2022-02-28T13:56:33 GMT-06:00" duration-ms="6478" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Setting up capabilities...]]>
@@ -29,26 +29,26 @@
             </line>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="alarmTimeValidFormat()[pri:0, instance:tests.AlarmTests@4fb3ee4e]" started-at="2022-02-28T13:47:45 GMT-06:00" name="alarmTimeValidFormat" finished-at="2022-02-28T13:47:47 GMT-06:00" duration-ms="2202" status="PASS">
+        <test-method signature="alarmTimeValidFormat()[pri:0, instance:tests.AlarmTests@4fb3ee4e]" started-at="2022-02-28T13:56:33 GMT-06:00" name="alarmTimeValidFormat" finished-at="2022-02-28T13:56:35 GMT-06:00" duration-ms="2235" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- alarmTimeValidFormat -->
-        <test-method signature="changeAlarmTime()[pri:0, instance:tests.AlarmTests@4fb3ee4e]" started-at="2022-02-28T13:47:47 GMT-06:00" name="changeAlarmTime" finished-at="2022-02-28T13:47:50 GMT-06:00" duration-ms="3013" status="PASS">
+        <test-method signature="changeAlarmTime()[pri:0, instance:tests.AlarmTests@4fb3ee4e]" started-at="2022-02-28T13:56:35 GMT-06:00" name="changeAlarmTime" finished-at="2022-02-28T13:56:38 GMT-06:00" duration-ms="2981" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- changeAlarmTime -->
-        <test-method signature="createNewAlarm()[pri:0, instance:tests.AlarmTests@4fb3ee4e]" started-at="2022-02-28T13:47:50 GMT-06:00" name="createNewAlarm" finished-at="2022-02-28T13:47:52 GMT-06:00" duration-ms="2047" status="PASS">
+        <test-method signature="createNewAlarm()[pri:0, instance:tests.AlarmTests@4fb3ee4e]" started-at="2022-02-28T13:56:38 GMT-06:00" name="createNewAlarm" finished-at="2022-02-28T13:56:40 GMT-06:00" duration-ms="2042" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[currentTime: 1:47 PM Alarm]]>
+              <![CDATA[currentTime: 1:56 PM Alarm]]>
             </line>
           </reporter-output>
         </test-method> <!-- createNewAlarm -->
-        <test-method signature="createNewAlarmCancel()[pri:0, instance:tests.AlarmTests@4fb3ee4e]" started-at="2022-02-28T13:47:52 GMT-06:00" name="createNewAlarmCancel" finished-at="2022-02-28T13:47:53 GMT-06:00" duration-ms="843" status="PASS">
+        <test-method signature="createNewAlarmCancel()[pri:0, instance:tests.AlarmTests@4fb3ee4e]" started-at="2022-02-28T13:56:40 GMT-06:00" name="createNewAlarmCancel" finished-at="2022-02-28T13:56:42 GMT-06:00" duration-ms="1405" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewAlarmCancel -->
-        <test-method signature="failingTestExample()[pri:0, instance:tests.AlarmTests@4fb3ee4e]" started-at="2022-02-28T13:47:53 GMT-06:00" name="failingTestExample" finished-at="2022-02-28T13:47:55 GMT-06:00" duration-ms="2251" status="FAIL">
+        <test-method signature="failingTestExample()[pri:0, instance:tests.AlarmTests@4fb3ee4e]" started-at="2022-02-28T13:56:42 GMT-06:00" name="failingTestExample" finished-at="2022-02-28T13:56:43 GMT-06:00" duration-ms="818" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [false] but found [true]]]>
@@ -61,7 +61,7 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 at org.testng.Assert.assertEquals(Assert.java:131)
 at org.testng.Assert.assertEquals(Assert.java:976)
 at org.testng.Assert.assertEquals(Assert.java:1010)
-at tests.AlarmTests.failingTestExample(AlarmTests.java:171)
+at tests.AlarmTests.failingTestExample(AlarmTests.java:153)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -96,7 +96,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failingTestExample -->
-        <test-method is-config="true" signature="terminate()[pri:0, instance:tests.AlarmTests@4fb3ee4e]" started-at="2022-02-28T13:47:55 GMT-06:00" name="terminate" finished-at="2022-02-28T13:47:56 GMT-06:00" duration-ms="336" status="PASS">
+        <test-method is-config="true" signature="terminate()[pri:0, instance:tests.AlarmTests@4fb3ee4e]" started-at="2022-02-28T13:56:43 GMT-06:00" name="terminate" finished-at="2022-02-28T13:56:43 GMT-06:00" duration-ms="442" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Cleaning up]]>

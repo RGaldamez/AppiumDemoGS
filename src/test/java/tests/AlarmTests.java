@@ -59,9 +59,7 @@ public class AlarmTests {
 			alarmTime = alarmDescription.getText();
 		}
 		
-//		Reporter.log("Alarm Time: "+ alarmTime,true);
 		Assert.assertEquals( alarmTime,expectedString);
-		
 		alarmDescription.click();
 		
 	}
@@ -81,20 +79,14 @@ public class AlarmTests {
 		btnOK.click();
 		
 		MobileElement alarmDescription=null;
-
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.TextView[@content-desc=\"9:25 AM\"]")));
-		
 		alarmDescription  = driver.findElementByXPath("//android.widget.TextView[@content-desc=\"9:25 AM\"]");
 		
 		MobileElement alarmSwitch = driver.findElementByXPath("//android.view.ViewGroup[@content-desc=\"9:25 AM Alarm\"]/android.widget.Switch");
 		Assert.assertNotNull(alarmDescription.getText(),"9:25 AM");
 		Assert.assertEquals(alarmSwitch.getAttribute("checked"),"true");
 	}
-	
-	
-	
 
-	
 	@Test
 	public void createNewAlarm() {
 		WebDriverWait wait = new WebDriverWait(driver,20);
@@ -121,14 +113,6 @@ public class AlarmTests {
 		boolean validAlarmCreated = true;
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.google.android.deskclock:id/fab")));
 		driver.findElementsByAccessibilityId(currentTime);
-//		try {
-//			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.google.android.deskclock:id/fab")));
-//			MobileElement validAlarm = driver.findElementByXPath("//android.view.ViewGroup[@content-desc=\""+currentTime+"\"]");	
-//		} catch (Exception e) {
-//			// TODO: handle exception
-//			validAlarmCreated = false;
-//			Reporter.log(e.getMessage(),true);
-//		}
 		
 		Assert.assertEquals(validAlarmCreated, true);	
 	}
@@ -145,7 +129,6 @@ public class AlarmTests {
 		try {
 			MobileElement invalidAlarm = driver.findElementByXPath("(//android.view.ViewGroup[@content-desc=\" Alarm\"])[4]");	
 		} catch (Exception e) {
-			// TODO: handle exception
 			invalidAlarmCreated = false;
 		}
 		
@@ -164,7 +147,6 @@ public class AlarmTests {
 		try {
 			MobileElement invalidAlarm = driver.findElementByXPath("(//android.view.ViewGroup[@content-desc=\" Alarm\"])[1]");	
 		} catch (Exception e) {
-			// TODO: handle exception
 			invalidAlarmCreated = false;
 		}
 		
