@@ -5,9 +5,9 @@
     <classes>
       <class name="tests.AlarmTests">
         <methods>
+          <include name="checkAlarmTimeMatch"/>
           <include name="setup"/>
           <include name="terminate"/>
-          <include name="failingTestExample"/>
         </methods>
       </class> <!-- tests.AlarmTests -->
     </classes>

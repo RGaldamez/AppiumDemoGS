@@ -1,2 +1,4 @@
 eclipse.preferences.version=1
+encoding//src/test/java/noPOM/AlarmTestsnoPOM.java=UTF-8
+encoding//src/test/java/pageObject/AlarmPage.java=UTF-8
 encoding//src/test/java/tests/AlarmTests.java=UTF-8

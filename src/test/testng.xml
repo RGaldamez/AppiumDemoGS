@@ -4,7 +4,7 @@
 
   <test name="Alarm Tests">
       <classes>
-      <class name="tests.AlarmTests"/>
+     	 <class name="tests.AlarmTests"/>
       </classes>
   </test> <!-- Test --> 
    
